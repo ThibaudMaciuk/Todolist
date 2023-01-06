@@ -2,10 +2,22 @@
 function get_info(int $id)
 {
     $db = new PDO('sqlite:db.sqlite');
-    $query = $db->query("SELECT * FROM task WHERE Fait = '0'");
+    $query = $db->query("SELECT * FROM task WHERE id = '$id'");
+    if (!$query)
+    {
+        return False;
+    }
     $query = $query->fetch();
     //$name = $query["$nom"];
-    return $query;
+    if ($query[2]==0)
+    {
+        return $query;
+    }
+    else
+    {
+        return 1;
+    }
+    
 }
 
 //echo var_dump(get_info(1));
@@ -16,11 +28,13 @@ function get_all_info()
     $b = 0;
     for ($i = 1; $b != 1; $i++)
     {
-        if (!get_info($i))
+        echo "i est egal a $i";
+        if (!get_info($i)[0])
         {
+            echo "Fin";
             $b = 1;
         }
-        else
+        elseif (get_info($i)!=1)
         {
             $name=get_info($i)[1];
             echo"<label class='form-check-label' for='flexSwitchCheckDefault'>$name</label>";
