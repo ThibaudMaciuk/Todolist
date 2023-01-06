@@ -10,6 +10,7 @@ function get_info(int $id)
 
 //echo var_dump(get_info(1));
 
+
 function get_all_info()
 {
     $b = 0;
