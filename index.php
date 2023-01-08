@@ -42,7 +42,7 @@ $date = date('d/m');
     <main>
         <section class="container "> 
             <div class="row py-4">
-                <div class="my-5 offset-2 col-8 text-center shadow rounded">
+                <div class="my-5 col-8 text-center shadow rounded">
                     <h1>ToDo List</h1>
                     <h3><?php echo $date;?> </h3>
                     <br />
