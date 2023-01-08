@@ -11,6 +11,7 @@ require 'recup.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <title>Todo List</title>
@@ -48,11 +49,11 @@ require 'recup.php';
                     <h1>ToDo List</h1>
                     <h3><?php echo $date;?> </h3>
                     <br />
-                    <form id="switch" name="switch "action="index.php" method="post">
+                    <h3>A Faire: </h3>
+                    <br />
                         <div class="form-check form-switch">
                             <?php get_all_not(); ?>
                         </div>
-                    </form>
             </div>
         </section>
 

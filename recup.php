@@ -39,9 +39,14 @@ function get_all_not()
         }
         elseif (get_info($i)[2]==0)
         {
+            $id = get_info($i)['ID'];
             $name=get_info($i)['Name'];
-            echo"<label class='form-check-label' for='flexSwitchCheckDefault'>$name</label>";
-            echo"<input class='form-check-input' type='checkbox' id='flexSwitchCheckDefault' onchange='document.getElementById('swith').submit()' >";
+            echo"<label class='form-check-label text-left' for='flexSwitchCheckDefault'>$name</label>";
+            echo "<a>&emsp;&emsp;</a>";
+            echo "<a class='bi bi-check-circle text-right' href='check.php?id=$id'></a>";
+            //$echo"<button type='submit' class='bi bi-check-circle'>";
+
+            //echo"<input class='form-check-input' type='checkbox' id='flexSwitchCheckDefault' onchange='document.getElementById('swith').submit()' >";
             echo "<br />";
         }
     }
